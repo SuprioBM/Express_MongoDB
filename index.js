@@ -2,7 +2,7 @@ const express = require("express")
 const app = express();
 const Product = require("./models/product.model");
 const mongoose = require("mongoose");
-const productRoute = require("./routes/productAPI")
+const productRoutes = require("./routes/productAPI")
 const db = require("./DB/dbConnect");
 
 
@@ -12,7 +12,7 @@ app.use(express.urlencoded({extended: false}))
 
 
 //ROUTES
-app.use('/api/products',productRoute)
+app.use('/api/products',productRoutes)
 
 
 
